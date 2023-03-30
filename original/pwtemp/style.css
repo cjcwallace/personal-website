@@ -1,0 +1,41 @@
+:root {
+	--old-fonts: Verdana,Arial,Helvetica;
+	--fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+/* Background Stripes */
+/* .stripe-1 {
+	color: white;
+	background: repeating-linear-gradient(
+		45deg,
+		#606dbc,
+		#606dbc 10px,
+		#465298 10px,
+		#465298 20px
+	);
+} */
+
+body, input, select, label { font-weight:300; font-family: var(--fonts); }
+
+.main-table { margin-left: 5%; margin-right: auto; border: 0; }
+.header-table { margin-left: 0%; empty-cells: show; table-layout: fixed; }
+thead { margin-bottom: 50px; }
+
+H1 { font: bold 18pt; font-family: var(--fonts); }
+P { font: 10pt var(--old-fonts) }
+
+TH { font: bold 10pt var(--old-fonts) ; 
+	text-align: center }
+
+TD { font: 10pt var(--old-fonts) }
+
+A { font-weight: bold }
+
+A:link { color: #4444DD }
+A:visited { color: #9999FF }
+A:active { color: #DDDD44 }
+
+.notlink { font : bold 10pt Verdana,Arial,Helvetica ; color : #662222 }
+
+.main-table-content {
+	text-align: center;
+}
