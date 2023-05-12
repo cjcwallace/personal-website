@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Fraunces&display=swap');
+/*
+NOTE
+#foo => style specific element with id="foo"
+.foo => style all elements with class="foo"
+*/
+/* Header */
+/* font-family: 'Fraunces', sans-serif;
+	color: rgba(0, 0, 0, 0.8);
+	font-weight: 400;
+	line-height: 1.58;
+	letter-spacing: -.003em;
+	font-size: 20px;
+	padding: 20px; */
+#header-grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#header {
+  border: 0;
+  width: 100%;
+}
+#header .menulink {
+  /* font-family: 'Fraunces', sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  font-size: 20px; */
+
+  /* padding-left: 0;
+  padding-right: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5px;
+  margin-bottom: 5px; */
+
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  justify-content: space-between;
+}
+a.navbutton:link, a.navbutton:visited, a.navbutton:hover, a.navbutton:active {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+#linkedin {
+  margin-left: auto;
+  cursor: pointer;
+  border: 0px solid #3498db;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+}
+#github {
+  margin-left: 2%;
+  cursor: pointer;
+  border: 0px solid #3498db;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+}
+/* Misc */
+body {
+  --left-right-margin: calc(min(2vw, 1%));
+
+  background: #eaf4e9;
+  font-family: 'Fraunces', sans-serif;
+  margin-top: 0;
+  padding-top: 0;
+  border: none;
+
+  margin-left: var(--left-right-margin);
+  margin-right: var(--left-right-margin);
+}
+.code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+/* homepage */
+#bio {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+#homepicture {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 320px;
+  width: 320px;
+  border-radius: 5%;
+  filter: drop-shadow(5px 5px 1rem grey);
+}
+#maintext {
+  font-family: 'Fraunces', sans-serif;
+	color: rgba(0, 0, 0, 0.8);
+	font-weight: 400;
+	line-height: 1.58;
+	letter-spacing: -.003em;
+	font-size: 48px;
+  margin-top: 0;
+}
+
+/* about */
+
+
+/* photos */
+@media (min-width: 1024px) {
+  .content {
+    max-width: calc(100% - 48px);
+  }
+}
+
+.content {
+  max-width: calc(100% - 18px);
+}
+
+.photoGridx {
+  /* width: 100%;
+  height: auto;
+
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 8px; */
+
+   /**
+   * User input values.
+   */
+   --grid-layout-gap: 0px;
+   --grid-column-count: 3;
+   --grid-item--min-width: 100px;
+
+   /**
+    * Calculated values.
+    */
+   --gap-count: calc(var(--grid-column-count) - 1);
+   --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+   --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+   display: grid;
+   grid-template-rows: repeat(auto-fit, 1fr);
+   grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+   grid-gap: var(--grid-layout-gap);
+}
+
+.photoGrid {
+  /**
+   * User input values.
+   */
+  --grid-layout-gap: 10px;
+  --grid-column-count: 3; /* This gets overridden by an inline style. */
+  --grid-item--min-width: 200px; /* This gets overridden by an inline style. */
+
+  /**
+   * Calculated values.
+   */
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+  grid-gap: var(--grid-layout-gap);
+}
+
+img.photo {
+  --height-input: 100%;
+
+  height: 33vw;
+  width: 33vw;
+  /* border-radius: 5%; */
+}
