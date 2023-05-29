@@ -3,6 +3,11 @@ import { useRoutes } from 'react-router-dom';
 
 import "./styles/index.css"
 
+// import LightGallery styles
+import '../node_modules/lightgallery/css/lightgallery.css';
+import '../node_modules/lightgallery/css/lg-zoom.css';
+import '../node_modules/lightgallery/css/lg-thumbnail.css';
+
 import Home from "./home"
 import About from "./about"
 import Trips from "./trips"

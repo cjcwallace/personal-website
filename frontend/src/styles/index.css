@@ -120,7 +120,7 @@ main {
 
 /* Photos */
 @media screen and (max-width: 776px) {
-  .photoGrid {
+  .lg-react-element{/* .photoGrid { */
     display: grid;
     grid-template-columns: 1fr;
     /* gap: 1vw; */
@@ -135,22 +135,22 @@ main {
   }
 }
 @media (min-width:777px) and (max-width: 1280px) {
-    .photoGrid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      /* gap: 1vw 0; */
-      gap: 2px 0;
-    }
-    .photo {
-      max-height: 48vw;
-      max-width: 48vw;
-      width: auto;
-      height: auto;
-      object-fit: cover;
-    }
+  .lg-react-element{/* .photoGrid { */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 1vw 0; */
+    gap: 2px 0;
+  }
+  .photo {
+    max-height: 48vw;
+    max-width: 48vw;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
 }
 @media screen and (min-width: 1281px) {
-  .photoGrid {
+  .lg-react-element{/* .photoGrid { */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     /* gap: 1vw 1vw; */

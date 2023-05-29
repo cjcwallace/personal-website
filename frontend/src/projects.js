@@ -4,6 +4,8 @@ import NavBar from "./NavBar"
 import { Configuration } from "./api-client/runtime"
 import { PhotosApi } from "./api-client/apis/PhotosApi"
 
+import LightGallery from "../node_modules/lightgallery/react"
+
 const apiClient = new PhotosApi(new Configuration({
   basePath: 'http://127.0.0.1:8000/',
   // headers: {
@@ -49,32 +51,17 @@ class PhotoGrid extends React.Component {
       )
     }
     console.log(this.state.photos)
-    let images = this.state.photos.map(
+    let galleryphotos = this.state.photos.map(
       photo => (
-        <div className="photoGridItem" key={photo.id}>
-          <img className="photo" src={photo.image} alt={photo.name} onClick={() => this.handleExpandImage(photo.id - 1)}></img>
-          {this.state.photos[photo.id - 1].isOpen && (
-            <dialog
-              className="dialog"
-              style={{ position: "absolute" }}
-              open
-              onClick={this.handleShowDialog}
-            >
-              <img
-                className="photo"
-                src={photo.image}
-                onClick={this.handleShowDialog}
-                alt="none found"
-              />
-            </dialog>
-          )}
-        </div>
+        <a className="photoGridItem" href={photo.image} key={photo.id}>
+          <img className="photo" alt={photo.name} src={photo.image} />
+        </a>
       )
     )
     return (
-      <div className="photoGrid">
-        {images}
-      </div>
+      <LightGallery speed={500} className="photoGrid">
+        {galleryphotos}
+      </LightGallery>
     )
   }
 }
