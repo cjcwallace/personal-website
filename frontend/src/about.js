@@ -5,6 +5,7 @@ const About = function(props) {
     return (
         <div>
             <NavBar />
+            <div className="spacer"></div>
             <p>about me??</p>
         </div>
     )

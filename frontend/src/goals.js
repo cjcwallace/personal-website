@@ -5,6 +5,7 @@ const Goals = function(props) {
   return (
     <div>
       <NavBar />
+      <div className="spacer"></div>
       <div>
         <p className="maintext">
           I'm Cameron, a Software Engineer based out of Seattle, Washington.

@@ -24,10 +24,11 @@ const Home = function(props) {
     return (
         <div>
             <NavBar />
+            <div className="spacer"></div>
             <section id="bio">
                 <img id="homepicture" src={randomImage} alt="homepic"></img>
                 <p id="maintext">
-                    I'm Cameron, a Software Engineer based out of Seattle, Washington.
+                    I'm Cameron, a Software Engineer based out of Seattle, Washington. I like to cook, climb, and code.
                 </p>
             </section>
         </div>

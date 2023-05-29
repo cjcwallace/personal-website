@@ -20,9 +20,22 @@ class PhotoGrid extends React.Component {
     };
   }
 
+  handleExpandImage = (photoId) => {
+    let photos = [...this.state.photos];
+    let photo = {
+      ...photos[photoId],
+      isOpen: !photos[photoId].isOpen,
+    }
+    photos[photoId] = photo
+    this.setState({photos})
+  };
+
   componentDidMount() {
-    apiClient.photosList().then((result) => {
-      this.setState({ photos: result })
+    apiClient.photosList().then((results) => {
+      results.forEach(element => {
+        element.isOpen = false;
+      });
+      this.setState({ photos: results })
       this.setState({ photoQueryComplete: true })
     }).catch((error) => {
       console.log(error);
@@ -35,7 +48,29 @@ class PhotoGrid extends React.Component {
         <p>no photos found</p>
       )
     }
-    let images = this.state.photos.map(photo => <img className="photo" src={photo.image} key={photo.id} alt={photo.name}></img>)
+    console.log(this.state.photos)
+    let images = this.state.photos.map(
+      photo => (
+        <div className="photoGridItem" key={photo.id}>
+          <img className="photo" src={photo.image} alt={photo.name} onClick={() => this.handleExpandImage(photo.id - 1)}></img>
+          {this.state.photos[photo.id - 1].isOpen && (
+            <dialog
+              className="dialog"
+              style={{ position: "absolute" }}
+              open
+              onClick={this.handleShowDialog}
+            >
+              <img
+                className="photo"
+                src={photo.image}
+                onClick={this.handleShowDialog}
+                alt="none found"
+              />
+            </dialog>
+          )}
+        </div>
+      )
+    )
     return (
       <div className="photoGrid">
         {images}
@@ -47,9 +82,8 @@ class PhotoGrid extends React.Component {
 const Projects = function(props) {
   return (
     <>
-      <div>
-        <NavBar />
-      </div>
+      <NavBar />
+      <div className="spacer"></div>
       <main>
         <PhotoGrid />
       </main>
