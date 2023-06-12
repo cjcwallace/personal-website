@@ -14,9 +14,9 @@ class NavBar extends React.Component {
                 <div id="header-grid">
                     <nav>
                         <ul id="menulink">
-                            <Link className="navbutton" to="/">CW</Link>
+                            <Link id="navbutton-name" to="/">cw</Link>
                             {/* <Link className="navbutton" to="/about">about</Link> */}
-                            <Link className="navbutton" to="/goals">goals</Link>
+                            {/* <Link className="navbutton" to="/goals">goals</Link> */}
                             <Link className="navbutton" to="/trips">trips</Link>
                             <Link className="navbutton" to="/projects">projects</Link>
                         </ul>

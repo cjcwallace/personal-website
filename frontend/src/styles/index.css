@@ -4,21 +4,15 @@ NOTE
 #foo => style specific element with id="foo"
 .foo => style all elements with class="foo"
 */
-/* Header */
-/* font-family: 'Fraunces', sans-serif;
-	color: rgba(0, 0, 0, 0.8);
-	font-weight: 400;
-	line-height: 1.58;
-	letter-spacing: -.003em;
-	font-size: 20px;
-	padding: 20px; */
 #header {
   font-family: 'Fraunces', sans-serif;
-  background: #eaf4e9;
+  /* background: #eaf4e9; */
+  background: white;
   border: 0;
   width: 100%;
   top: 0;
   position: sticky;
+  padding-top: 10px;
 }
 #header-grid {
   display: flex;
@@ -41,6 +35,14 @@ NOTE
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
 }
+#navbutton-name {
+  font-size: 28px;
+  padding-left: 10%;
+}
+#navbutton-name:link, #navbutton-name:visited, #navbutton-name:hover, #navbutton-name:active {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
 .socials {
   cursor: pointer;
   border: 0px solid;
@@ -57,14 +59,16 @@ NOTE
 }
 /* Misc */
 body {
-  background: #eaf4e9;
+  /* background: #eaf4e9; */
+  background: white;
   font-family: 'Fraunces', sans-serif;
   margin: 0;
 }
 main {
   --left-right-margin: calc(min(2vw, 1%));
 
-  background: #eaf4e9;
+  /* background: #eaf4e9; */
+  background: white;
   font-family: 'Fraunces', sans-serif;
   margin-top: 0;
   padding-top: 0;
@@ -120,10 +124,9 @@ main {
 
 /* Photos */
 @media screen and (max-width: 776px) {
-  .lg-react-element{/* .photoGrid { */
+  .lg-react-element{
     display: grid;
     grid-template-columns: 1fr;
-    /* gap: 1vw; */
     gap: 2px;
   }
   .photo {
@@ -135,10 +138,9 @@ main {
   }
 }
 @media (min-width:777px) and (max-width: 1280px) {
-  .lg-react-element{/* .photoGrid { */
+  .lg-react-element{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* gap: 1vw 0; */
     gap: 2px 0;
   }
   .photo {
@@ -150,16 +152,16 @@ main {
   }
 }
 @media screen and (min-width: 1281px) {
-  .lg-react-element{/* .photoGrid { */
+  .lg-react-element{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* gap: 1vw 1vw; */
-    gap: 2px 2px;
+    gap: 20px 2px;
   }
   .photo {
     --left-right-margin: calc(min(2vw, 1%));
+    --max-image-width: calc(max(90vw / 3), 31vw);
     max-height: 30vw;
-    max-width: 30vw;
+    max-width: 32.5vw;
     width: auto;
     height: auto;
     object-fit: cover;
@@ -169,5 +171,5 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid lightgrey;
+  /* background-color: white; */
 }
