@@ -26,11 +26,20 @@ class Location(models.Model):
         if self.city:
             ret += f'{self.city}, '
         if self.state:
-            ret += f'{self.state}, '
+            if ret == "":
+                ret += f'{self.state}'
+            else:
+                ret += f', {self.state}'
         if self.country:
-            ret += f'{self.country}, '
+            if ret == "":
+                ret += f'{self.country}'
+            else:
+                ret += f', {self.country}'
         if self.city:
-            ret += f'{self.continent}'
+            if ret == "":
+                ret += f'{self.continent}'
+            else:
+                ret += f', {self.continent}'
         return ret
 
 class Activity(models.Model):
