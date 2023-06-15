@@ -4,14 +4,12 @@ NOTE
 .foo => style all elements with class="foo"
 */
 body {
-  /* background: #eaf4e9; */
   background: white;
   font-family: 'Fraunces', sans-serif;
   margin: 0;
 }
 main {
   --left-right-margin: calc(min(2vw, 1%));
-  /* background: #eaf4e9; */
   background: white;
   font-family: 'Fraunces', sans-serif;
   margin-top: 0;
@@ -27,7 +25,6 @@ main {
 }
 #header {
   font-family: 'Fraunces', sans-serif;
-  /* background: #eaf4e9; */
   background: white;
   border: 0;
   width: 100%;
@@ -59,6 +56,7 @@ main {
 #navbutton-name {
   font-size: 28px;
   padding-left: 10%;
+  padding-right: 10px;
 }
 #navbutton-name:link, #navbutton-name:visited, #navbutton-name:hover, #navbutton-name:active {
   text-decoration: none;
@@ -101,6 +99,7 @@ main {
 	letter-spacing: -.003em;
 	font-size: 48px;
   margin-top: 0;
+  margin-right: 5%;
 }
 @media only screen and (min-width:777px) and (max-width: 1023px){
   #bio {
@@ -116,7 +115,10 @@ main {
   }
 }
 
-/* gaols */
+/* goals */
+#goals {
+  padding-left: 5%;
+}
 .goal-bullet {
   padding: 0;
 }
@@ -173,7 +175,22 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: white; */
+}
+.trip-header {
+  margin-top: 0;
+}
+#go-back-button {
+  display:inline-block;
+  margin: 50px;
+}
+
+/* error page */
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* fonts */

@@ -4,6 +4,7 @@
 npm install
 npm run dev -> builds index-bundle
 
+### Api Generation for OpenAPI
 generate API Client based on `schema.yml` file
 `openapi-generator-cli generate -i ../backend/schema.yml -g typescript-fetch -o ./src/api-client/`
 or

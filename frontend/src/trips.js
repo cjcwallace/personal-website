@@ -1,69 +1,57 @@
-import React from "react"
+import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
 import NavBar from "./NavBar"
+import { formatDate } from "./helpers"
 
-import { Configuration } from "./api-client/runtime"
-import { PhotosApi } from "./api-client/apis/PhotosApi"
 
-import LightGallery from "lightgallery/react"
+function TripList () {
+  const [isLoading, setIsLoading] = useState(true);
+  const [data, setData] = useState(null);
 
-const apiClient = new PhotosApi(new Configuration({
-  basePath: 'http://127.0.0.1:8000/',
-  // headers: {
-  //   'X-CSRFToken': Cookies.get('csrftoken'),
-  // }
-}));
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-class PhotoGrid extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      photos: [],
-      photoQueryComplete: false,
-    };
-  }
-
-  handleExpandImage = (photoId) => {
-    let photos = [...this.state.photos];
-    let photo = {
-      ...photos[photoId],
-      isOpen: !photos[photoId].isOpen,
-    }
-    photos[photoId] = photo
-    this.setState({photos})
+  const fetchData = () => {
+    setIsLoading(true);
+    fetch("/api/trips/", {})
+        .then((response) => response.json())
+        .then((data) => {
+            setData(data);
+            setIsLoading(false);
+    })
+    .catch((error) => {
+        console.log(error);
+        setIsLoading(false);
+    });
   };
 
-  componentDidMount() {
-    apiClient.photosList().then((results) => {
-      results.forEach(element => {
-        element.isOpen = false;
-      });
-      this.setState({ photos: results })
-      this.setState({ photoQueryComplete: true })
-    }).catch((error) => {
-      console.log(error);
-    })
-  }
+  let trips = data?.map(
+    trip => (
+      <>
+        {formatDate(new Date(trip.trip_date))} - {}
+        <Link className="tripListItem" to={`/trips/${trip.id}`} key={trip.name + trip.id} state={trip}>
+          {trip.name}
+        </Link>
+      </>
+    )
+  )
 
-  render() {
-    if (this.state.photos === []) {
-      return (
-        <p>no photos found</p>
-      )
-    }
-    console.log(this.state.photos)
-    let galleryphotos = this.state.photos.map(
-      photo => (
-        <a className="photoGridItem" href={photo.image} key={photo.id}>
-          <img className="photo" alt={photo.name} src={photo.image} />
-        </a>
-      )
-    )
-    return (
-      <LightGallery speed={500} className="photoGrid">
-        {galleryphotos}
-      </LightGallery>
-    )
-  }
+  return (
+    <>
+      {!isLoading && trips && (
+          <div>
+            {trips}
+          </div>
+      )}
+      {!isLoading && !trips && (
+        <p>no trips found</p>
+      )}
+      {isLoading && (
+        <p>loading</p>
+      )}
+    </>
+  )
 }
 
 const Projects = function(props) {
@@ -72,7 +60,7 @@ const Projects = function(props) {
       <NavBar />
       <div className="spacer"></div>
       <main>
-        <PhotoGrid />
+        <TripList />
       </main>
     </>
   )
