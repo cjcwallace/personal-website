@@ -55,3 +55,6 @@ docs/_build/
 backend/media/*
 backend/static/*.jpeg
 backend/static/*.svg
+
+# Mac
+.DS_Store
