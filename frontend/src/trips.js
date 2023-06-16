@@ -4,7 +4,7 @@ import NavBar from "./NavBar"
 import { formatDate } from "./helpers"
 
 
-function TripList () {
+function TripList() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
 
@@ -15,34 +15,34 @@ function TripList () {
   const fetchData = () => {
     setIsLoading(true);
     fetch("/api/trips/", {})
-        .then((response) => response.json())
-        .then((data) => {
-            setData(data);
-            setIsLoading(false);
-    })
-    .catch((error) => {
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
         console.log(error);
         setIsLoading(false);
-    });
+      });
   };
 
   let trips = data?.map(
     trip => (
-      <>
-        {formatDate(new Date(trip.trip_date))} - {}
+      <div className="trip-list-item">
+        {formatDate(new Date(trip.trip_date)).padEnd(20) + '- '}
         <Link className="tripListItem" to={`/trips/${trip.id}`} key={trip.name + trip.id} state={trip}>
           {trip.name}
         </Link>
-      </>
+      </div>
     )
   )
 
   return (
     <>
       {!isLoading && trips && (
-          <div>
-            {trips}
-          </div>
+        <div className="goal-bullet-indented">
+          {trips}
+        </div>
       )}
       {!isLoading && !trips && (
         <p>no trips found</p>
@@ -54,12 +54,15 @@ function TripList () {
   )
 }
 
-const Projects = function(props) {
+const Projects = function (props) {
   return (
     <>
       <NavBar />
       <div className="spacer"></div>
       <main>
+        <div id="trips-header">
+          <h2>Trips</h2>
+        </div>
         <TripList />
       </main>
     </>

@@ -34,12 +34,12 @@ function PhotoSlideshow() {
 	return (
 		<>
 			{!isLoading && galleryphotos && (
-                <>
-                    <p>slideshow</p>
-                    <LightGallery speed={500} className="photoGrid">
-                        {galleryphotos}
-                    </LightGallery>
-                </>
+				<>
+					<p>slideshow</p>
+					<LightGallery speed={500} className="photoGrid">
+						{galleryphotos}
+					</LightGallery>
+				</>
 			)}
 			{!isLoading && !galleryphotos && (
 				<p>no photos found</p>

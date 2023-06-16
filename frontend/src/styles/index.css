@@ -116,7 +116,7 @@ main {
 }
 
 /* goals */
-#goals {
+#goals-header {
   padding-left: 5%;
 }
 .goal-bullet {
@@ -127,6 +127,13 @@ main {
 }
 
 /* trip */
+#trips-header {
+  padding-left: 5%;
+}
+.trip-list-item {
+  /* display: inline-block; */
+  padding-bottom: 10px;
+}
 @media screen and (max-width: 776px) {
   .lg-react-element{
     display: grid;
