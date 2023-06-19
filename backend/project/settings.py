@@ -27,9 +27,11 @@ REAL_BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = 'django-insecure-_ltv&3h3n&8*c+7n&r%p$msknb0ysa@nau16zi#+d^*v9z24od'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'cameronwallace.net',
+]
 
 
 # Application definition
