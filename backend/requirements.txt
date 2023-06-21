@@ -6,7 +6,7 @@ djangorestframework==3.14.0
 drf-spectacular==0.26.1
 inflection==0.5.1
 jsonschema==4.17.3
-Pillow==9.4.0
+Pillow==8.3.2
 pyrsistent==0.19.3
 python-dateutil==2.8.2
 pytz==2023.3
