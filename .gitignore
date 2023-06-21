@@ -52,9 +52,9 @@ coverage.xml
 docs/_build/
 
 # Static files
-backend/media/*
-backend/static/*.jpeg
-backend/static/*.svg
+backend/static_media/*
+backend/static_files/*.jpeg
+backend/static_files/*.svg
 
 # Mac
 .DS_Store
