@@ -1,0 +1,7 @@
+# Static files
+static_media/*
+static_files/*.jpeg
+static_files/*.svg
+.venv/
+
+keys.py
