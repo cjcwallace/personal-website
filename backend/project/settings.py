@@ -30,11 +30,10 @@ SECRET_KEY = 'django-insecure-_ltv&3h3n&8*c+7n&r%p$msknb0ysa@nau16zi#+d^*v9z24od
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'cameronwallace.net',
-    '127.0.0.1',
+    '.cameronwallace.net',
 ]
 if DEBUG:
-    ALLOWED_HOSTS += '127.0.0.1'
+    ALLOWED_HOSTS += ['.localhost', '127.0.0.1', '[::1]']
 
 
 # Application definition

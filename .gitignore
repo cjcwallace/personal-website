@@ -55,6 +55,7 @@ docs/_build/
 backend/static_media/*
 backend/static_files/*.jpeg
 backend/static_files/*.svg
+backend/.venv
 
 # Mac
 .DS_Store
