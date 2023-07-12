@@ -16,14 +16,3 @@ Install requirements
 
 Start the backend
 `python manage.py runserver`
-
-
-### Api Generation for OpenAPI
-### NOTE this step seems overkill and I've since moved away from using OpenAPI
-generate API Client based on `schema.yml` file
-`openapi-generator-cli generate -i ../backend/schema.yml -g typescript-fetch -o ./src/api-client/`
-or
-`openapi-generator-cli generate -i http://127.0.0.1:8000/api/schema/ -g typescript-fetch -o ./src/api-client/`
-
-generate api schema
-`python manage.py spectacular --file schema.yml`
