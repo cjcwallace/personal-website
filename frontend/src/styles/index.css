@@ -130,9 +130,18 @@ main {
 #trips-header {
   padding-left: 5%;
 }
+.trip-bullet-indented {
+  padding-left: 5%;
+
+}
 .trip-list-item {
-  /* display: inline-block; */
   padding-bottom: 10px;
+  display: flex;
+}
+.trip-date {
+  width: 176px;
+  text-align: right;
+  display: flex;
 }
 @media screen and (max-width: 776px) {
   .lg-react-element{
@@ -198,6 +207,11 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+#error-home-button {
+  padding-top: 30px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /* fonts */

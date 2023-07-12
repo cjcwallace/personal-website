@@ -51,7 +51,7 @@ const Trip = function(props) {
   return (
     <>
       <NavBar />
-      <div className="spacer"></div>
+      <div className="spacer" />
       <main>
         <TripPage />
       </main>

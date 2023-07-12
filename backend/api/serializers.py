@@ -22,5 +22,5 @@ class PhotoSerializer(serializers.ModelSerializer):
 class TripSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trip
-        fields = ['id', 'name', 'trip_date', 'location']
-        read_only_fields = ['id', 'name', 'trip_date', 'location']
+        fields = ['id', 'name', 'trip_date_start', 'trip_date_end', 'location']
+        read_only_fields = ['id', 'name', 'trip_date_start', 'trip_date_end', 'location']

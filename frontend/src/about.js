@@ -5,7 +5,7 @@ const About = function(props) {
     return (
         <div>
             <NavBar />
-            <div className="spacer"></div>
+            <div className="spacer" />
             <p>about me??</p>
         </div>
     )

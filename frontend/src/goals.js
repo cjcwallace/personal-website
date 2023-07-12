@@ -5,7 +5,7 @@ const Goals = function(props) {
   return (
     <>
       <NavBar />
-      <div className="spacer"></div>
+      <div className="spacer" />
       <main>
         <div id="goals-header">
           <h2>Goals</h2>

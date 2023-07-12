@@ -35,7 +35,7 @@ class Location(models.Model):
                 ret += f'{self.country}'
             else:
                 ret += f', {self.country}'
-        if self.city:
+        if self.continent:
             if ret == "":
                 ret += f'{self.continent}'
             else:
@@ -55,8 +55,10 @@ class Activity(models.Model):
 
 class Trip(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
-    trip_date = models.DateTimeField('date of trip', null=True, blank=True)
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    trip_date = models.DateTimeField('do not use', null=True, blank=True)
+    trip_date_start = models.DateField('Start of trip', null=True, blank=True)
+    trip_date_end = models.DateField('End of trip', null=True, blank=True)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name

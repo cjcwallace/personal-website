@@ -24,7 +24,7 @@ const Home = function(props) {
     return (
         <div>
             <NavBar />
-            <div className="spacer"></div>
+            <div className="spacer" />
             <section id="bio">
                 <img id="homepicture" src={randomImage} alt="homepic"></img>
                 <p id="maintext">

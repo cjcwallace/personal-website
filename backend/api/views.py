@@ -21,7 +21,7 @@ class PhotoViewSet(viewsets.ModelViewSet):
 
 class TripViewSet(viewsets.ModelViewSet):
     serializer_class = TripSerializer
-    queryset = Trip.objects.all().order_by('trip_date')
+    queryset = Trip.objects.all().order_by('trip_date_start')
     http_method_names = ['get']
 
 class MyReactView(TemplateView):

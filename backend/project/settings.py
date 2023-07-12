@@ -139,8 +139,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_files')]
 
-MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static_media')
+if DEBUG:
+    MEDIA_URL = "media/"
+else:
+    MEDIA_URL = "https://media.cameronwallace.net/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

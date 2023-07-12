@@ -5,7 +5,7 @@ const Trips = function(props) {
   return (
     <div>
       <NavBar />
-      <div className="spacer"></div>
+      <div className="spacer" />
       <p>projects</p>
     </div>
 )

@@ -26,10 +26,25 @@ function TripList() {
       });
   };
 
+  const getTripDate = (trip) => {
+    let trip_date = "";
+
+    if (!trip.trip_date_start) {
+      return trip_date;
+    }
+    trip_date = formatDate(new Date(trip.trip_date_start))
+    if (trip.trip_date_end) {
+      trip_date += ' - ';
+      trip_date += formatDate(new Date(trip.trip_date_end))
+    }
+    return trip_date
+  }
+
   let trips = data?.map(
     trip => (
       <div className="trip-list-item">
-        {formatDate(new Date(trip.trip_date)).padEnd(20) + '- '}
+        <div className="trip-date">{getTripDate(trip)}</div>
+        <span>&#160;&#8212;&#160;&#160;</span>
         <Link className="tripListItem" to={`/trips/${trip.id}`} key={trip.name + trip.id} state={trip}>
           {trip.name}
         </Link>
@@ -40,7 +55,7 @@ function TripList() {
   return (
     <>
       {!isLoading && trips && (
-        <div className="goal-bullet-indented">
+        <div className="trip-bullet-indented">
           {trips}
         </div>
       )}
@@ -58,7 +73,7 @@ const Projects = function (props) {
   return (
     <>
       <NavBar />
-      <div className="spacer"></div>
+      <div className="spacer" />
       <main>
         <div id="trips-header">
           <h2>Trips</h2>
