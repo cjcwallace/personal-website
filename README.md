@@ -7,8 +7,8 @@ I wanted to write the site from scratch using Django/DRF on the backend and Reac
 See what I've been working on at https://cameronwallace.net
 
 ## Frontend
-npm install
-npm run dev -> builds index-bundle
+`npm install`
+`npm run dev` -> builds index-bundle
 
 ## Backend
 Install requirements
