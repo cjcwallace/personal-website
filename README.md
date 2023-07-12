@@ -4,6 +4,8 @@ I've also thought of using it as a place to store some relevant info/docs for my
 
 I wanted to write the site from scratch using Django/DRF on the backend and React on the frontend to expand my skillset and keep myself working on a project that uses relevant, modern technologies.
 
+See what I've been working on at https://cameronwallace.net
+
 ## Frontend
 npm install
 npm run dev -> builds index-bundle
