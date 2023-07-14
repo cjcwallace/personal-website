@@ -1,5 +1,5 @@
-import React from "react"
 import NavBar from "./NavBar"
+import React from "react"
 
 const Goals = function(props) {
   return (

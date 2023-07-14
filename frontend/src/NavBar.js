@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from 'react-router-dom'
-
 import "./styles/index.css"
+
+import { Link } from 'react-router-dom'
+import React from "react"
 
 function openInNewTab(url) {
     window.open(url, '_blank').focus();

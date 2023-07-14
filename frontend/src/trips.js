@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import { Link } from 'react-router-dom'
 import NavBar from "./NavBar"
-import { formatDate } from "./helpers"
+import { getTripDate } from "./helpers"
 
-
-function TripList() {
+/**
+ * A practice in API calls, currently unused due to the small number of trip posts
+ * @returns A formatted list of trips returned from the /api/trips/ endpoint
+ */
+// eslint-disable-next-line no-unused-vars
+function FetchTripList() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
 
@@ -25,20 +30,6 @@ function TripList() {
         setIsLoading(false);
       });
   };
-
-  const getTripDate = (trip) => {
-    let trip_date = "";
-
-    if (!trip.trip_date_start) {
-      return trip_date;
-    }
-    trip_date = formatDate(new Date(trip.trip_date_start))
-    if (trip.trip_date_end) {
-      trip_date += ' - ';
-      trip_date += formatDate(new Date(trip.trip_date_end))
-    }
-    return trip_date
-  }
 
   let trips = data?.map(
     trip => (
@@ -67,6 +58,10 @@ function TripList() {
       )}
     </>
   )
+}
+
+function TripList() {
+
 }
 
 const Projects = function (props) {

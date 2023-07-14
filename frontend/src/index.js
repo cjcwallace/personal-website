@@ -1,21 +1,33 @@
-import React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
 import "./styles/index.css"
-
-// import LightGallery styles
 import '../node_modules/lightgallery/css/lightgallery.css';
 import '../node_modules/lightgallery/css/lg-zoom.css';
 import '../node_modules/lightgallery/css/lg-thumbnail.css';
 
-import Home from "./home"
+import * as ReactDOM from 'react-dom/client';
+
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+
 import About from "./about"
-import Trips from "./trips"
-import TripPage from "./trip"
-import Goals from "./goals"
-import Projects from "./projects"
 import ErrorPage from './error-page';
+import Goals from "./goals"
+import Home from "./home"
+import Projects from "./projects"
+import React from 'react';
+import TripPage from "./trip"
+import Trips from "./trips"
+
+// import LightGallery styles
+
+
+
+
+
+
+
+
+
+
+
 
 const router = createBrowserRouter([
   {

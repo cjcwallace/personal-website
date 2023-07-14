@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+
 import NavBar from "./NavBar"
 import PhotoGallery from "./gallery";
 import PhotoSlideshow from "./slideshow";
 
+/**
+ * 
+ * @returns A page with list of trips returned from /api/trips/ endpoint
+ */
 function TripPage () {
   const { tripId } = useParams();
   const [isLoading, setIsLoading] = useState(true);

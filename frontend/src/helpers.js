@@ -12,3 +12,17 @@ export function formatDateTime(date) {
 export function formatDate(date) {
     return (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear();
 }
+
+export const getTripDate = (trip) => {
+    let trip_date = "";
+
+    if (!trip.trip_date_start) {
+      return trip_date;
+    }
+    trip_date = formatDate(new Date(trip.trip_date_start))
+    if (trip.trip_date_end) {
+      trip_date += ' - ';
+      trip_date += formatDate(new Date(trip.trip_date_end))
+    }
+    return trip_date
+  }
