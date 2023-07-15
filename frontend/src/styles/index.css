@@ -122,10 +122,12 @@ main {
   padding-left: 5%;
 }
 .goal-bullet {
+  list-style-type:none;
   padding: 0;
 }
 .goal-bullet-indented {
-  padding-left: 5%;
+  list-style-type:none;
+  margin-left: 5%;
 }
 
 /* trip */
