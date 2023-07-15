@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import About from "./about"
 import ErrorPage from './error-page';
+import EuropePost2022 from "./posts/2022_Europe";
 import Goals from "./goals"
 import Home from "./home"
 import Projects from "./projects"
@@ -17,17 +18,6 @@ import TripPage from "./trip"
 import Trips from "./trips"
 
 // import LightGallery styles
-
-
-
-
-
-
-
-
-
-
-
 
 const router = createBrowserRouter([
   {
@@ -46,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: 'trips/:tripId',
     element: <TripPage />
+  },
+  {
+    path: 'trips/Europe22',
+    element: <EuropePost2022 />
   },
   {
     path: 'goals',

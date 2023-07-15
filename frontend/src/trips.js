@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import EuropePost2022 from "./posts/2022_Europe"
 import { Link } from 'react-router-dom'
 import NavBar from "./NavBar"
 import { getTripDate } from "./helpers"
@@ -61,7 +62,17 @@ function FetchTripList() {
 }
 
 function TripList() {
-
+  return (
+    <>
+      <div className="trip-list-item">
+        <div className="trip-date">{'12/14/2022 - 1/3/2023'}</div>
+        <span>&#160;&#8212;&#160;&#160;</span>
+        <Link className="tripListItem" to={`/trips/Europe22`} key={'Europe22'}>
+          {'Europe 2022'}
+        </Link>
+      </div>
+    </>
+  )
 }
 
 const Projects = function (props) {
