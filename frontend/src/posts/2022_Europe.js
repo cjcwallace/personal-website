@@ -460,7 +460,7 @@ const Blog = () => {
       <br />
       <img
         className="blog-single-photo"
-        src={imgPrefix + "/2022_Europe/0000526000014.jpg"}
+        src={imgPrefix + "/2022_Europe/000052600014.jpg"}
         alt=""
       ></img>
       <br />
@@ -483,13 +483,13 @@ const Blog = () => {
       <br />
       <img
         className="blog-single-photo"
-        src={imgPrefix + "/2022_Europe/0000526000016.jpg"}
+        src={imgPrefix + "/2022_Europe/000052600016.jpg"}
         alt=""
       ></img>
       <br />
       <img
         className="blog-single-photo"
-        src={imgPrefix + "/2022_Europe/0000526000017.jpg"}
+        src={imgPrefix + "/2022_Europe/000052600017.jpg"}
         alt=""
       ></img>
       <br />
@@ -533,19 +533,19 @@ const Blog = () => {
       <h3>writeup pending...</h3>
       <img
         className="blog-single-photo"
-        src={imgPrefix + "/2022_Europe/0000526000029.jpg"}
+        src={imgPrefix + "/2022_Europe/000052600029.jpg"}
         alt=""
       ></img>
       <br />
       <img
         className="blog-single-photo"
-        src={imgPrefix + "/2022_Europe/0000526000031.jpg"}
+        src={imgPrefix + "/2022_Europe/000052600031.jpg"}
         alt=""
       ></img>
       <br />
       <img
         className="blog-single-photo"
-        src={imgPrefix + "/2022_Europe/0000526000033.jpg"}
+        src={imgPrefix + "/2022_Europe/000052600033.jpg"}
         alt=""
       ></img>
       <br />
