@@ -17,8 +17,6 @@ import React from 'react';
 import TripPage from "./trip"
 import Trips from "./trips"
 
-// import LightGallery styles
-
 const router = createBrowserRouter([
   {
     path: "/",
