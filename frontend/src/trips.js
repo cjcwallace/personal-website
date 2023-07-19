@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import EuropePost2022 from "./posts/2022_Europe"
 import { Link } from 'react-router-dom'
 import NavBar from "./NavBar"
 import { getTripDate } from "./helpers"
@@ -61,16 +60,67 @@ function FetchTripList() {
   )
 }
 
-function TripList() {
+function TripListItem(props) {
   return (
     <>
       <div className="trip-list-item">
-        <div className="trip-date">{'12/14/2022 - 1/3/2023'}</div>
-        <span>&#160;&#8212;&#160;&#160;</span>
-        <Link className="tripListItem" to={`/trips/Europe22`} key={'Europe22'}>
-          {'Europe 2022'}
-        </Link>
-      </div>
+        <div className="trip-date">{props.date}</div>
+          <div>
+            {props.hasLink ? 
+              <>
+                <span>&#160;&#8212;&#160;&#160;</span> 
+                <Link className="tripListItem" to={props.link} key={props.key}>
+                  {props.name}
+                </Link>
+              </>
+            : 
+              <span>&#160;&#8212;&#160;&#160;{props.name}</span> 
+            }
+          </div>
+        </div>
+    </>
+  )
+}
+
+function InternationalTripList() {
+  return (
+    <>
+      {/* Europe 22 */}
+      <TripListItem 
+        date={'12/14/2022 - 1/3/2023'}
+        name={'Europe 2022'}
+        hasLink={true}
+        link={`/trips/Europe22`}
+        key={'Europe22'}
+      />
+      {/* Europe 21 */}
+      <TripListItem 
+        date={'9/14/2021 - 10/1/2021'}
+        name={'Europe 2021'}
+        hasLink={false}
+        key={'Europe21'}
+      />
+    </>
+  )
+}
+
+function OutdoorTripList() {
+  return (
+    <>
+      {/* Yellow Aster Butte */}
+      <TripListItem 
+        date={'7/9/2023 - 7/10/2023'}
+        name={'Yellow Aster Butte'}
+        hasLink={false}
+        key={'YAB'}
+      />
+      {/* Mt St Helens */}
+      <TripListItem 
+        date={'6/11/2023'}
+        name={'Mt St Helens'}
+        hasLink={false}
+        key={'MSH'}
+      />
     </>
   )
 }
@@ -83,8 +133,11 @@ const Projects = function (props) {
       <main>
         <div id="trips-header">
           <h2>Trips</h2>
+          <h3>International</h3>
+          <InternationalTripList />
+          <h3>Outdoor</h3>
+          <OutdoorTripList />
         </div>
-        <TripList />
       </main>
     </>
   )
