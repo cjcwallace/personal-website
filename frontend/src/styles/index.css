@@ -79,7 +79,9 @@ main {
   margin: 0 2%;
 }
 
-/* homepage */
+/* ================ */
+/*     homepage     */
+/* ================ */
 #bio {
   display: flex;
   align-items: stretch;
@@ -117,7 +119,9 @@ main {
   }
 }
 
-/* goals */
+/* ================ */
+/*      goals       */
+/* ================ */
 #goals-header {
   padding-left: 5%;
 }
@@ -129,8 +133,9 @@ main {
   list-style-type:none;
   margin-left: 5%;
 }
-
-/* trip */
+/* ================ */
+/*       trip       */
+/* ================ */
 #trips-header {
   padding-left: 5%;
 }
@@ -204,7 +209,9 @@ main {
   margin: 50px;
 }
 
-/* blog specific */
+/* ================ */
+/*   blog specific  */
+/* ================ */
 .blog-post {
   width: 728px;
   display: block;
@@ -232,7 +239,9 @@ main {
   max-height: 300px;
 }
 
-/* error page */
+/* ================ */
+/*    error page    */
+/* ================ */
 #error-page {
   display: flex;
   flex-direction: column;
@@ -246,7 +255,9 @@ main {
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* fonts */
+/* ================ */
+/*       fonts      */
+/* ================ */
 @font-face {
   font-family: 'Fraunces';
   src: url('../fonts/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf');
