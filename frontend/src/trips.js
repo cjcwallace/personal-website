@@ -66,10 +66,10 @@ function TripListItem(props) {
       <div className="trip-list-item">
         <div className="trip-date">{props.date}</div>
           <div>
-            {props.hasLink ? 
+            {props.link ? 
               <>
                 <span>&#160;&#8212;&#160;&#160;</span> 
-                <Link className="tripListItem" to={props.link} key={props.key}>
+                <Link className="tripListItem" to={props.link} key={props._key}>
                   {props.name}
                 </Link>
               </>
@@ -89,16 +89,14 @@ function InternationalTripList() {
       <TripListItem 
         date={'12/14/2022 - 1/3/2023'}
         name={'Europe 2022'}
-        hasLink={true}
         link={`/trips/Europe22`}
-        key={'Europe22'}
+        _key={'Europe22'}
       />
       {/* Europe 21 */}
       <TripListItem 
         date={'9/14/2021 - 10/1/2021'}
         name={'Europe 2021'}
-        hasLink={false}
-        key={'Europe21'}
+        _key={'Europe21'}
       />
     </>
   )
@@ -111,15 +109,13 @@ function OutdoorTripList() {
       <TripListItem 
         date={'7/9/2023 - 7/10/2023'}
         name={'Yellow Aster Butte'}
-        hasLink={false}
-        key={'YAB'}
+        _key={'YAB'}
       />
       {/* Mt St Helens */}
       <TripListItem 
         date={'6/11/2023'}
         name={'Mt St Helens'}
-        hasLink={false}
-        key={'MSH'}
+        _key={'MSH'}
       />
     </>
   )
