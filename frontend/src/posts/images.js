@@ -2,17 +2,31 @@ import React from "react";
 
 export class Image extends React.Component {
   render() {
-    // eslint-disable-next-line jsx-a11y/alt-text
-    return <img {...this.props.data}></img>;
+    var {description, ...data} = this.props.data
+    return (
+      <>
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
+        <img {...data}></img>
+        {description ? 
+          <p className="blog-photo-description">{description}</p>
+          : null
+        }
+      </>
+    )
   }
 }
 
 export class ImageNewLine extends React.Component {
   render() {
+    var {description, ...data} = this.props.data
     return (
       <>
         {/* eslint-disable-next-line jsx-a11y/alt-text */}
-        <img {...this.props.data}></img>
+        <img {...data}></img>
+        {description ? 
+          <p className="blog-photo-description">{description}</p>
+          : null
+        }
         <br />
       </>
     );

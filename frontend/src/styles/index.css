@@ -229,8 +229,14 @@ main {
   margin-right: auto;
 }
 /* .blog-side-by-side-photos {
-
 } */
+.blog-photo-description {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  font-weight: bold;
+  text-indent: 0;
+}
 #peters-link {
   display: grid;
   justify-content: center;
