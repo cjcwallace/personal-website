@@ -24,7 +24,9 @@ class NavBar extends React.Component {
               <Link className="navbutton" to="/trips">
                 trips
               </Link>
-              {/* <Link className="navbutton" to="/projects">projects</Link> */}
+              <Link className="navbutton" to="/projects">
+                projects
+              </Link>
             </ul>
           </nav>
           <button

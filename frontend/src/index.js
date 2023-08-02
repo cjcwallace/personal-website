@@ -23,18 +23,19 @@ const router = createBrowserRouter([
     element: <Home />,
     errorElement: <ErrorPage />,
   },
-  {
-    path: 'about',
-    element: <About />,
-  },
+  // {
+  //   path: 'about',
+  //   element: <About />,
+  // },
   {
     path: 'trips',
     element: <Trips />,
   },
-  {
-    path: 'trips/:tripId',
-    element: <TripPage />
-  },
+  // We may want this at some point, but not now
+  // {
+  //   path: 'trips/:tripId',
+  //   element: <TripPage />
+  // },
   {
     path: 'trips/Europe22',
     element: <EuropePost2022 />

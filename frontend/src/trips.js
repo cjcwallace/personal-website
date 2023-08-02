@@ -103,6 +103,7 @@ function InternationalTripList() {
 }
 
 function OutdoorTripList() {
+  // We can query this from an API call at some point
   return (
     <>
       {/* Yellow Aster Butte */}
@@ -111,11 +112,23 @@ function OutdoorTripList() {
         name={'Yellow Aster Butte'}
         _key={'YAB'}
       />
+      {/* Hibox Mountain */}
+      <TripListItem 
+        date={'7/3/2023'}
+        name={'Hibox Mountain'}
+        _key={'HBM'}
+      />
       {/* Mt St Helens */}
       <TripListItem 
         date={'6/11/2023'}
         name={'Mt St Helens'}
         _key={'MSH'}
+      />
+      {/* Labyrinth Mountain */}
+      <TripListItem 
+        date={'6/6/2023'}
+        name={'Labyrinth Mountain'}
+        _key={'LBM'}
       />
     </>
   )
@@ -131,7 +144,7 @@ const Projects = function (props) {
           <h2>Trips</h2>
           <h3>International</h3>
           <InternationalTripList />
-          <h3>Outdoor</h3>
+          <h3>Outdoors</h3>
           <OutdoorTripList />
         </div>
       </main>
