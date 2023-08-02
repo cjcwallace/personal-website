@@ -84,18 +84,18 @@ main {
 /* ================ */
 #bio {
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
 }
-#homepicture {
+#home-picture {
   margin-left: 5%;
   margin-right: 5%;
   height: 320px;
   width: 320px;
-  border-radius: 5%;
-  filter: drop-shadow(5px 5px 1rem grey);
+  border-radius: 2%;
+  filter: drop-shadow(1px 1px 1px grey);
 }
-#maintext {
+#main-text {
   font-family: 'Fraunces', sans-serif;
 	color: rgba(0, 0, 0, 0.8);
 	font-weight: 400;
@@ -105,19 +105,27 @@ main {
   margin-top: 0;
   margin-right: 5%;
 }
-@media only screen and (min-width:777px) and (max-width: 1023px){
+#home-introduction {
+  font-family: 'Fraunces', sans-serif;
+	color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  margin-top: 3%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+/* @media only screen and (min-width:777px) and (max-width: 1023px){
   #bio {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1vw;
   }
   #homepicture {
-    margin-left: 1%;
-    margin-right: 1%;
-    height: 98vw;
-    width: 98vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 80vw;
+    width: 80vw;
   }
-}
+} */
 
 /* ================ */
 /*      goals       */
@@ -133,6 +141,7 @@ main {
   list-style-type:none;
   margin-left: 5%;
 }
+
 /* ================ */
 /*       trip       */
 /* ================ */
@@ -210,6 +219,13 @@ main {
 }
 
 /* ================ */
+/*    projects      */
+/* ================ */
+#projects-header {
+  padding-left: 5%;
+}
+
+/* ================ */
 /*   blog specific  */
 /* ================ */
 .blog-post {
@@ -235,6 +251,7 @@ main {
   font-style: italic;
   font-size: smaller;
   font-weight: bold;
+  color: rgb(80, 80, 80);
   text-indent: 0;
 }
 #peters-link {

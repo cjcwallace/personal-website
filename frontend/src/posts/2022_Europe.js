@@ -1,92 +1,11 @@
-// import EleanoreSlideshow from '../EleanoreSlideshow';
-
 import "react-image-gallery/styles/css/image-gallery.css";
 
+import { EdinburghCastleSlideshow, EleanoreSlideshow } from "./images";
 import { Image, ImageNewLine } from "./images";
 
 import { EuropeImages } from "./images";
-import ImageGallery from "react-image-gallery";
 import NavBar from "../NavBar";
 import React from "react";
-
-const imgPrefix = "https://media.cameronwallace.net";
-
-class EleanoreSlideshow extends React.Component {
-  constructor() {
-    super();
-    this.images = [
-      // 56.25 => 16:9 to 9:16
-      {
-        originalHeight: "546px",
-        original: imgPrefix + "/2022_Europe/image69.jpg",
-      },
-      {
-        originalHeight: "546px",
-        original: imgPrefix + "/2022_Europe/image2.jpg",
-      },
-      {
-        originalHeight: "100%",
-        original: imgPrefix + "/2022_Europe/image53.jpg",
-      },
-      {
-        originalHeight: "100%",
-        original: imgPrefix + "/2022_Europe/image37.jpg",
-      },
-      {
-        originalHeight: "546px",
-        original: imgPrefix + "/2022_Europe/image8.jpg",
-      },
-      {
-        originalHeight: "546px",
-        original: imgPrefix + "/2022_Europe/image5.jpg",
-      },
-    ];
-  }
-  render() {
-    return (
-      <>
-        <ImageGallery
-          items={this.images}
-          showFullscreenButton={false}
-          showPlayButton={false}
-          showThumbnails={false}
-          showIndex={true}
-        />
-        <br />
-      </>
-    );
-  }
-}
-class EdinburghCastleSlideshow extends React.Component {
-  constructor() {
-    super();
-    this.images = [
-      // 56.25 => 16:9 to 9:16
-      {
-        originalHeight: "546px",
-        original: imgPrefix + "/2022_Europe/image25.jpg",
-      },
-      {
-        originalHeight: "546px",
-        original: imgPrefix + "/2022_Europe/image21.jpg",
-      },
-    ];
-  }
-  render() {
-    return (
-      <>
-        <ImageGallery
-          items={this.images}
-          showFullscreenButton={false}
-          showPlayButton={false}
-          showThumbnails={false}
-          showIndex={true}
-        />
-        <br />
-      </>
-    );
-  }
-}
 
 const Blog = () => {
   return (
@@ -111,7 +30,7 @@ const Blog = () => {
       <ImageNewLine data={EuropeImages[2]} />
       <ImageNewLine data={EuropeImages[3]} />
       <ImageNewLine data={EuropeImages[4]} />
-      <ImageNewLine data={EuropeImages[5]} />
+      <Image data={EuropeImages[5]} />
       <p>
         Getting to explore parts of Bristol was wonderful, but we had really
         come to town for a more specific reason -- football! Miranda’s

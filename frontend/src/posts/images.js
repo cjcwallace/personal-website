@@ -1,3 +1,4 @@
+import ImageGallery from "react-image-gallery";
 import React from "react";
 
 export class Image extends React.Component {
@@ -60,11 +61,13 @@ export const EuropeImages = [
     className: "blog-single-photo",
     src: imgPrefix + "/2022_Europe/000052570004.jpg",
     alt: "Bristol Bridge",
+    description: "The bridge that a year ago I had driven a small Ford Puma across on the way to Ilfracombe"
   },
   {
     className: "blog-single-photo",
     src: imgPrefix + "/2022_Europe/000052570013.jpg",
     alt: "Frozen river",
+    description: "Thrown cones had frozen through the surface"
   },
   {
     className: "blog-single-photo",
@@ -401,3 +404,83 @@ export const EuropeImages = [
     alt: "",
   },
 ];
+
+// Used in Europe2022
+export class EleanoreSlideshow extends React.Component {
+  constructor() {
+    super();
+    this.images = [
+      // 56.25 => 16:9 to 9:16
+      {
+        originalHeight: "546px",
+        original: imgPrefix + "/2022_Europe/image69.jpg",
+      },
+      {
+        originalHeight: "546px",
+        original: imgPrefix + "/2022_Europe/image2.jpg",
+      },
+      {
+        originalHeight: "100%",
+        original: imgPrefix + "/2022_Europe/image53.jpg",
+      },
+      {
+        originalHeight: "100%",
+        original: imgPrefix + "/2022_Europe/image37.jpg",
+      },
+      {
+        originalHeight: "546px",
+        original: imgPrefix + "/2022_Europe/image8.jpg",
+      },
+      {
+        originalHeight: "546px",
+        original: imgPrefix + "/2022_Europe/image5.jpg",
+      },
+    ];
+  }
+  render() {
+    return (
+      <>
+        <ImageGallery
+          items={this.images}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          showThumbnails={false}
+          showIndex={true}
+        />
+        <br />
+      </>
+    );
+  }
+}
+
+// Used in Europe2022
+export class EdinburghCastleSlideshow extends React.Component {
+  constructor() {
+    super();
+    this.images = [
+      // 56.25 => 16:9 to 9:16
+      {
+        originalHeight: "546px",
+        original: imgPrefix + "/2022_Europe/image25.jpg",
+      },
+      {
+        originalHeight: "546px",
+        original: imgPrefix + "/2022_Europe/image21.jpg",
+      },
+    ];
+  }
+  render() {
+    return (
+      <>
+        <ImageGallery
+          items={this.images}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          showThumbnails={false}
+          showIndex={true}
+        />
+        <br />
+      </>
+    );
+  }
+}
