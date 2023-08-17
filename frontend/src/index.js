@@ -7,15 +7,18 @@ import * as ReactDOM from 'react-dom/client';
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
-import About from "./about"
 import ErrorPage from './error-page';
 import EuropePost2022 from "./posts/2022_Europe";
 import Goals from "./goals"
 import Home from "./home"
 import Projects from "./projects"
 import React from 'react';
-import TripPage from "./trip"
 import Trips from "./trips"
+import Work from "./work"
+
+// import About from "./about"
+// import TripPage from "./trip"
+
 
 const router = createBrowserRouter([
   {
@@ -23,10 +26,6 @@ const router = createBrowserRouter([
     element: <Home />,
     errorElement: <ErrorPage />,
   },
-  // {
-  //   path: 'about',
-  //   element: <About />,
-  // },
   {
     path: 'trips',
     element: <Trips />,
@@ -47,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: 'projects',
     element: <Projects />,
+  },
+  {
+    path: 'work',
+    element: <Work />,
   },
 ]);
 
