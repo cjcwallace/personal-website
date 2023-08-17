@@ -1,10 +1,10 @@
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import { EdinburghCastleSlideshow, EleanoreSlideshow } from "./images";
-import { Image, ImageNewLine } from "./images";
+import { EdinburghCastleSlideshow, EleanoreSlideshow } from "../components/images";
+import { Image, ImageNewLine } from "../components/images";
 
-import { EuropeImages } from "./images";
-import NavBar from "../NavBar";
+import { EuropeImages } from "../components/images";
+import NavBar from "../components/NavBar";
 import React from "react";
 
 const Blog = () => {

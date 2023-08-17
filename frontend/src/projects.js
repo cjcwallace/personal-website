@@ -1,4 +1,4 @@
-import NavBar from "./NavBar";
+import NavBar from "./components/NavBar";
 import React from "react";
 
 const websiteRepo = (
@@ -33,22 +33,20 @@ const fatcorkBlurb = (
   </p>
 );
 
-const Trips = function (props) {
+const Projects = function (props) {
   return (
     <div>
       <NavBar />
       <div className="spacer" />
       <main>
-        <div className="blog-post">
           <h2>Projects</h2>
           <h3>website</h3>
           {websiteBlurb}
           <h3>fatcork</h3>
           {fatcorkBlurb}
-        </div>
       </main>
     </div>
   );
 };
 
-export default Trips;
+export default Projects;

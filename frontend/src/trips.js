@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Link } from 'react-router-dom'
-import NavBar from "./NavBar"
+import NavBar from "./components/NavBar"
 import { getTripDate } from "./helpers"
 
 /**
@@ -134,7 +134,7 @@ function OutdoorTripList() {
   )
 }
 
-const Projects = function (props) {
+const Trips = function (props) {
   return (
     <>
       <NavBar />
@@ -152,4 +152,4 @@ const Projects = function (props) {
   )
 }
 
-export default Projects
+export default Trips
