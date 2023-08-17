@@ -104,14 +104,17 @@ main {
 	font-size: 48px;
   margin-top: 0;
   margin-right: 5%;
+  white-space: pre-wrap;
 }
 #home-introduction {
   font-family: 'Fraunces', sans-serif;
 	color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
+  font-size: 22px;
   margin-top: 3%;
   margin-right: 5%;
   margin-left: 5%;
+  white-space: pre-line;
 }
 /* @media only screen and (min-width:777px) and (max-width: 1023px){
   #bio {
@@ -223,6 +226,67 @@ main {
 /* ================ */
 #projects-header {
   padding-left: 5%;
+}
+
+/* ================ */
+/*       work       */
+/* ================ */
+#workmain {
+  width: 1000px;
+}
+#documents {
+  display: flex;
+  width: max-content
+}
+
+#resumeimg {
+  width: 400px;
+  height: auto;
+}
+#resumedownload, #resumedownload-link:link, #resumedownload-link:visited, #resumedownload-link:hover, #resumedownload-link:active {
+  text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#paolorecimg {
+  width: 400px;
+  height: auto;
+}
+#paolorecdownload, #paolorecdownload-link:link, #paolorecdownload-link:visited, #paolorecdownload-link:hover, #paolorecdownload-link:active {
+  text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.download-icon {
+  width: 13px;
+  height: 13px;
+}
+
+#work-history{
+  padding-bottom: 100px;
+}
+.work-history-section {
+  display: flex;
+  align-items: baseline;
+}
+.work-history-section > * {
+  padding: 0;
+  margin: 0;
+}
+.work-history-company {
+  padding-right: 5px
+}
+.work-history-date {
+  padding-left: 5px
+}
+.work-history-job-title{
+  white-space: pre-wrap;
+}
+.connecting-dots {
+  flex: 1;
+  overflow: hidden;
 }
 
 /* ================ */
