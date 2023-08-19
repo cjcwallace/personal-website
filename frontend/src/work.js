@@ -32,7 +32,6 @@ function WorkHistory(props) {
     ['fatcork', 'May 2023 - Current', 'Associate'],
     ['AROYA / METER Group', 'July 2021 - March 2023', 'Software Engineer'],
     ['Bayou on Bay', 'March 2019 - March 2020', 'Line Cook / Prep Chef'],
-    ['Dominos', '', ''],
     ['WholeFoods', '', ''],
   ]
 
