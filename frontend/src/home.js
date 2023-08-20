@@ -14,7 +14,6 @@ const intro = (
   I've been up to, and things that interest me. For the last few years 
   thats been cooking, climbing and coding. `
   )
-  // I've also been working at a Champagne shop.`
 
 const mainText = <div id="main-text">{hello}</div>;
 const introduction = <p id="home-introduction">{intro}</p>;
