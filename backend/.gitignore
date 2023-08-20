@@ -1,7 +1,7 @@
-# Static files
 static_media/*
-static_files/*.jpeg
-static_files/*.svg
+static_files/*
+!static_files/index-bundle.js
+
 .venv/
 
 keys.py
