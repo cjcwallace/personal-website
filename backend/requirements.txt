@@ -19,7 +19,7 @@ jsonschema==4.17.3
 lazy-object-proxy==1.9.0
 mccabe==0.7.0
 phonenumberslite==8.13.16
-Pillow==9.0.0
+Pillow==9.2.0
 platformdirs==3.8.1
 psycopg==3.1.9
 psycopg-binary==3.1.9
