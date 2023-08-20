@@ -6,7 +6,7 @@ chardet==3.0.4
 charset-normalizer==3.2.0
 colorama==0.4.6
 dill==0.3.6
-Django==4.1
+Django==4.1.10
 django-cors-headers==4.1.0
 django-phonenumber-field==7.1.0
 django-taggit==4.0.0
