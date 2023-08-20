@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Image } from "./components/images";
+import { Image } from "./components/Images";
 import NavBar from "./components/NavBar";
 import image1 from "./images/tea.jpeg";
 import image2 from "./images/obelisk.jpeg";

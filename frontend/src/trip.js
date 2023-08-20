@@ -2,8 +2,8 @@ import { Link, useParams } from 'react-router-dom'
 import React, { useEffect, useState } from "react";
 
 import NavBar from "./components/NavBar"
-import PhotoGallery from "./gallery";
-import PhotoSlideshow from "./components/slideshow";
+import PhotoGallery from "./components/gallery";
+import PhotoSlideshow from "./components/Slideshow";
 
 /**
  * 

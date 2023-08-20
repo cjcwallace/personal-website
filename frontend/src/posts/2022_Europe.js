@@ -1,9 +1,7 @@
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import { EdinburghCastleSlideshow, EleanoreSlideshow } from "../components/images";
-import { Image, ImageNewLine } from "../components/images";
+import { EdinburghCastleSlideshow, EleanoreSlideshow, EuropeImages, Image, ImageNewLine } from "../components/Images";
 
-import { EuropeImages } from "../components/images";
 import NavBar from "../components/NavBar";
 import React from "react";
 
